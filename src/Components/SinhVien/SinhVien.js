@@ -6,12 +6,10 @@ import React from 'react';
 const sinhVien = (props) => {
     return(
         <div>
+        <h1>tôi là quang</h1>
         <p>{props.hoten} tuổi{props.tuoi}</p>
-
         <p> {props.children} </p>
-
-        <h1>i am person</h1>
         </div>
     );
-};
+};  
 export default sinhVien;
