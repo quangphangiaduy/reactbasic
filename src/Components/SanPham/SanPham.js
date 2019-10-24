@@ -7,6 +7,7 @@ const sanPham = (props) =>{
             <p>Tên sản phẩm{props.tensanpham}</p>
             <p>Giá{props.gia}</p>
             <p>Mô tả{props.children}</p>
+            <br></br>
         </div>
     );
 };

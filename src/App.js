@@ -4,15 +4,28 @@ import './App.css';
 import SanPham from './Components/SanPham/SanPham'
 
 class App extends Component {
+  state = {
+    SanPham : [
+      {masanpham : 1, tensanpham:'tivi', gia : 12},
+      {masanpham : 2, tensanpham:'quat', gia : 14},
+      {masanpham : 3, tensanpham:'dieuhoa', gia : 13},
+    ],
+  }
+
+  xuLyCapNhat = () =>{
+    this.setState(
+      {
+        lop:'18cdth11'
+      }
+    )
+  }
   render(){
     return(
     <div className = "App">
-      <SanPham masanpham="1" tensanpham="tivi" gia="12$" children="đây là mô tả" />
-      <SanPham masanpham="2" tensanpham="quat" gia="13$" children="đây là mô tả" />
-      <SanPham masanpham="3" tensanpham="dieuhoa" gia="14$" children="đây là mô tả" />
-      <SanPham masanpham="4" tensanpham="tulanh" gia="15$" children="đây là mô tả" />
-      <SanPham masanpham="5" tensanpham="maygiat" gia="16$" children="đây là mô tả" />
-     
+      <SanPham masanpham={this.state.SanPham[0].masanpham} tensanpham={this.state.SanPham[0].tensanpham} gia={this.state.SanPham[0].gia} />
+      <button onClick = {this.xuLyCapNhat} >
+          CậpNhật
+      </button>
     </div>
       ); 
    }
